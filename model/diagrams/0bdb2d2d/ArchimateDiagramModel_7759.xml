@@ -1,0 +1,40 @@
+<archimate:ArchimateDiagramModel
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:archimate="http://www.archimatetool.com/archimate"
+    name="Total view for Production line controller"
+    id="7759">
+  <children
+      xsi:type="archimate:DiagramModelArchimateObject"
+      id="7761">
+    <sourceConnections
+        xsi:type="archimate:DiagramModelArchimateConnection"
+        id="7763"
+        source="7761"
+        target="7762">
+      <archimateRelationship
+          xsi:type="archimate:AssignmentRelationship"
+          href="AssignmentRelationship_7744.xml#7744"/>
+    </sourceConnections>
+    <bounds
+        x="33"
+        y="120"
+        width="133"
+        height="53"/>
+    <archimateElement
+        xsi:type="archimate:Location"
+        href="Location_7428.xml#7428"/>
+  </children>
+  <children
+      xsi:type="archimate:DiagramModelArchimateObject"
+      id="7762"
+      targetConnections="7763">
+    <bounds
+        x="33"
+        y="33"
+        width="133"
+        height="60"/>
+    <archimateElement
+        xsi:type="archimate:Node"
+        href="Node_7748.xml#7748"/>
+  </children>
+</archimate:ArchimateDiagramModel>

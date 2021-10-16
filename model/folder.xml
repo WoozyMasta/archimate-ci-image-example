@@ -1,0 +1,6 @@
+<archimate:ArchimateModel
+    xmlns:archimate="http://www.archimatetool.com/archimate"
+    name="ArchiMetal"
+    id="54525ee5"
+    purpose="This Case Study demonstrates the value of the ArchiMate 2.1 modeling language for planning and expressing complex business transformation.&#xD;&#xA;&#xD;&#xA;The Case Study is about a fictitious manufacturer named ArchiMetal. Through high-level architecture modeling, the ArchiMate language illuminates the coherence between an organization, and its processes, applications, and infrastructure. This Case Study presents examples of ArchiMate models that can be elaborated as necessary for analysis, communication, decision support, and implementation."
+    version="4.6.0"/>

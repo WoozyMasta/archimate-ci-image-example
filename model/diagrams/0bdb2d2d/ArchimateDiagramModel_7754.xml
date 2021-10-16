@@ -1,0 +1,40 @@
+<archimate:ArchimateDiagramModel
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:archimate="http://www.archimatetool.com/archimate"
+    name="Total view for Process cell controller"
+    id="7754">
+  <children
+      xsi:type="archimate:DiagramModelArchimateObject"
+      id="7756">
+    <sourceConnections
+        xsi:type="archimate:DiagramModelArchimateConnection"
+        id="7758"
+        source="7756"
+        target="7757">
+      <archimateRelationship
+          xsi:type="archimate:AssignmentRelationship"
+          href="AssignmentRelationship_7742.xml#7742"/>
+    </sourceConnections>
+    <bounds
+        x="33"
+        y="113"
+        width="133"
+        height="53"/>
+    <archimateElement
+        xsi:type="archimate:Location"
+        href="Location_7425.xml#7425"/>
+  </children>
+  <children
+      xsi:type="archimate:DiagramModelArchimateObject"
+      id="7757"
+      targetConnections="7758">
+    <bounds
+        x="33"
+        y="33"
+        width="133"
+        height="53"/>
+    <archimateElement
+        xsi:type="archimate:Node"
+        href="Node_7746.xml#7746"/>
+  </children>
+</archimate:ArchimateDiagramModel>
