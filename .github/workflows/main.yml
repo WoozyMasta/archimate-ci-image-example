@@ -1,0 +1,10 @@
+on: [push]
+
+jobs:
+  archi_report:
+    runs-on: ubuntu-latest
+    name: Deploy Archi report HTML to GitHub Pages
+    steps:
+      - name: Deploy Archi report
+        id: archi
+        uses: WoozyMasta/archimate-ci-image@4.9.1-0.1
