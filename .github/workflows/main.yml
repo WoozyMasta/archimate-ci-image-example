@@ -8,3 +8,13 @@ jobs:
       - name: Deploy Archi report
         id: archi
         uses: WoozyMasta/archimate-ci-image@4.9.1-0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          ARCHI_HTML_REPORT_ENABLED: true
+          ARCHI_JASPER_REPORT_ENABLED: true
+          ARCHI_JASPER_REPORT_FORMATS: PDF,DOCX
+          ARCHI_CSV_REPORT_ENABLED: true
+          ARCHI_EXPORT_MODEL_ENABLED: true
+          # GITHUB_PAGES_DOMAIN
+          GITHUB_PAGES_BRANCH: gh-pages
+          GIT_SUBTREE_PREFIX: .archi_report
