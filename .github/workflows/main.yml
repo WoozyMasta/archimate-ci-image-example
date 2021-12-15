@@ -13,7 +13,7 @@ jobs:
 
       - name: Deploy Archi report
         id: archi
-        uses: WoozyMasta/archimate-ci-image@4.9.1-0.8
+        uses: WoozyMasta/archimate-ci-image@4.9.1-0.9
         with:
           archiHtmlReportEnabled: true
           archiJasperReportEnabled: true
