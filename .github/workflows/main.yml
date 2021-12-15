@@ -20,3 +20,4 @@ jobs:
           archiJasperReportFormats: PDF,DOCX
           archiCsvReportEnabled: true
           archiExportModelEnabled: true
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
