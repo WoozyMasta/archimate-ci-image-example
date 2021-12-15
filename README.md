@@ -5,6 +5,8 @@ This project provides an example of the [Archi][] model [ArchiMetal][].
 The model was published using the [coArchi][] plugin for further visualization
 of reports using the CI container [archimate-ci-image][].
 
+[View demo](https://woozymasta.github.io/archimate-ci-image-example/)
+
 [Archi]: https://www.archimatetool.com
 [coArchi]: https://github.com/archimatetool/archi-modelrepository-plugin
 [archimate-ci-image]: https://github.com/WoozyMasta/archimate-ci-image
