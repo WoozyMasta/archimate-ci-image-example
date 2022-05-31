@@ -1,3 +1,5 @@
+name: Build and deploy container app to Azure Web App - archimate
+
 on: [push]
 
 jobs:
@@ -21,3 +23,25 @@ jobs:
           archiCsvReportEnabled: true
           archiExportModelEnabled: true
           githubToken: ${{ secrets.GITHUB_TOKEN }}
+          
+  deploy:
+    runs-on: ubuntu-latest
+    needs: archi_report
+    environment:
+      name: 'production'
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+
+    steps:
+    - name: Deploy to Azure Web App
+      id: deploy-to-webapp
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: 'archimate'
+        slot-name: 'production'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_6928530757284278be09016ebcde71c9 }}
+        archiHtmlReportEnabled: true
+        archiJasperReportEnabled: true
+        archiJasperReportFormats: PDF,DOCX
+        archiCsvReportEnabled: true
+        archiExportModelEnabled: true
+        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_e0c7e13e01304a13bcef72fb4f48cd90 }}/docker.io/woozymasta/archimate-ci:${{ github.sha }}'
