@@ -23,14 +23,14 @@ jobs:
       uses: docker/login-action@v1
       with:
         registry: https://index.docker.io/v1/
-        username: ${{ secrets.AzureAppService_ContainerUsername_e0c7e13e01304a13bcef72fb4f48cd90 }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_ded05abbd96d493d9b532cffd167b9dc }}
+        username: ${{ secrets.AzureAppService_ContainerUsername_d6a3a4eb3c64447a891f5a012266a6be }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_7fd6fa8f1ac0485b95c31dad064f80a4 }}
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_e0c7e13e01304a13bcef72fb4f48cd90 }}/woozymasta/archimate-ci:${{ github.sha }}
+        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_d6a3a4eb3c64447a891f5a012266a6be }}/WoozyMasta/archimate-ci-image@4.9.2-1.0.3:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -47,10 +47,5 @@ jobs:
       with:
         app-name: 'archimate'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_6928530757284278be09016ebcde71c9 }}
-        archiHtmlReportEnabled: true
-        archiJasperReportEnabled: true
-        archiJasperReportFormats: PDF,DOCX
-        archiCsvReportEnabled: true
-        archiExportModelEnabled: true
-        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_e0c7e13e01304a13bcef72fb4f48cd90 }}/docker.io/woozymasta/archimate-ci:${{ github.sha }}'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_7cc36996a01342c297c85eda3a806652 }}
+        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_d6a3a4eb3c64447a891f5a012266a6be }}/WoozyMasta/archimate-ci-image@4.9.2-1.0.3:${{ github.sha }}'
