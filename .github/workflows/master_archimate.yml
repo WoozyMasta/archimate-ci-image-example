@@ -30,7 +30,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_e0c7e13e01304a13bcef72fb4f48cd90 }}/docker.io/woozymasta/archimate-ci:${{ github.sha }}
+        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_e0c7e13e01304a13bcef72fb4f48cd90 }}/woozymasta/archimate-ci:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -48,4 +48,9 @@ jobs:
         app-name: 'archimate'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_6928530757284278be09016ebcde71c9 }}
+        archiHtmlReportEnabled: true
+        archiJasperReportEnabled: true
+        archiJasperReportFormats: PDF,DOCX
+        archiCsvReportEnabled: true
+        archiExportModelEnabled: true
         images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_e0c7e13e01304a13bcef72fb4f48cd90 }}/docker.io/woozymasta/archimate-ci:${{ github.sha }}'
