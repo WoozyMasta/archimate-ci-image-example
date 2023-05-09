@@ -21,3 +21,4 @@ jobs:
           archiCsvReportEnabled: true
           archiExportModelEnabled: true
           githubToken: ${{ secrets.GITHUB_TOKEN }}
+          debugAction: true
