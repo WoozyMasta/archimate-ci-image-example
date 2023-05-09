@@ -8,9 +8,8 @@ of reports using the CI container [archimate-ci-image][]
 
 Use [GitHub Action][gh-action] or you can pull image from registries:
 
-* `ghcr.io/woozymasta/archimate-ci:latest`
-* `quay.io/woozymasta/archimate-ci:latest`
-* `docker.io/woozymasta/archimate-ci:latest`
+* `ghcr.io/woozymasta/archimate-ci-image:5.0.2-1.0.4`
+* `docker.io/woozymasta/archimate-ci-image:5.0.2-1.0.4`
 
 ## Examples and Demo
 
